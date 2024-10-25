@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Myntra Scrapper",
+    "description": "This extension will scrap the data from myntra website.",
+    "version": "1.0",
+    "permissions": [],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.myntra.com/*/*/*/*/buy"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ]
+}
